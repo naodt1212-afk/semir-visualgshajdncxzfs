@@ -20,7 +20,7 @@ function KineticWord({ word, delay = 0, glow = false }: { word: string; delay?: 
             stiffness: 220,
             damping: 16,
           }}
-          style={glow ? { textShadow: "0 0 60px rgba(255,42,60,0.55)" } : undefined}
+          style={{ textShadow: glow ? "0 0 60px rgba(255,42,60,0.55)" : "none" }}
         >
           {c}
         </motion.span>
