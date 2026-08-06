@@ -9,6 +9,8 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { Faq } from "@/components/site/Faq";
 import { Footer } from "@/components/site/Footer";
 import { FloatingWidget } from "@/components/site/FloatingWidget";
+import { ParticleField } from "@/components/motion/ParticleField";
+import { MagneticCursor } from "@/components/motion/MagneticCursor";
 
 const title = "Ruchit P. — Brand, Packaging & UI/UX Designer";
 const description =
@@ -30,19 +32,23 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <Projects />
-        <TestimonialHighlight />
-        <Services />
-        <About />
-        <Testimonials />
-        <Faq />
-      </main>
-      <Footer />
-      <FloatingWidget />
+    <div className="relative min-h-screen bg-background">
+      <ParticleField />
+      <MagneticCursor />
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <Projects />
+          <TestimonialHighlight />
+          <Services />
+          <About />
+          <Testimonials />
+          <Faq />
+        </main>
+        <Footer />
+        <FloatingWidget />
+      </div>
     </div>
   );
 }

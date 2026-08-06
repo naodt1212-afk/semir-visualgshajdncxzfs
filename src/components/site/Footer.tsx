@@ -1,61 +1,91 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Reveal, RevealGroup, itemVariants } from "@/components/motion/Reveal";
 
 const socials = ["Instagram", "Dribbble", "Behance", "LinkedIn"];
 
 export function Footer() {
+  const ref = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end end"] });
+  const x = useTransform(scrollYProgress, [0, 1], ["-12%", "6%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1.06]);
+
   return (
-    <footer className="relative overflow-hidden border-t border-border pt-20">
-      <div className="red-halo pointer-events-none absolute -bottom-40 left-1/2 h-96 w-[900px] -translate-x-1/2 opacity-25 blur-3xl" />
+    <footer ref={ref} className="relative overflow-hidden border-t border-border pt-20">
+      <motion.div
+        className="red-halo pointer-events-none absolute -bottom-40 left-1/2 h-96 w-[900px] -translate-x-1/2 blur-3xl"
+        animate={{ opacity: [0.15, 0.35, 0.15] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="relative mx-auto max-w-6xl px-4">
-        <h2 className="max-w-4xl text-5xl font-extrabold leading-[0.95] sm:text-7xl">
-          Lets build <span className="text-primary">incredible</span> work together.
-        </h2>
+        <Reveal>
+          <h2 className="max-w-4xl text-5xl font-extrabold leading-[0.95] sm:text-7xl">
+            Lets build <span className="text-primary">incredible</span> work together.
+          </h2>
+        </Reveal>
 
-        <div className="mt-12 grid gap-8 border-t border-border pt-10 sm:grid-cols-3">
-          <div>
+        <RevealGroup className="mt-12 grid gap-8 border-t border-border pt-10 sm:grid-cols-3">
+          <motion.div variants={itemVariants}>
             <p className="text-sm text-muted-foreground">Email me</p>
-            <a
+            <motion.a
               href="mailto:hello@ruchitdesigns.com"
-              className="mt-2 inline-flex text-lg font-semibold hover:text-primary"
+              whileHover={{ scale: 1.06, x: 4 }}
+              transition={{ type: "spring", stiffness: 380, damping: 14 }}
+              className="mt-2 inline-flex origin-left text-lg font-semibold transition-all duration-300 ease-out hover:text-primary"
             >
               hello@ruchitdesigns.com
-            </a>
-          </div>
-          <div>
+            </motion.a>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <p className="text-sm text-muted-foreground">Book a slot</p>
-            <a
+            <motion.a
               href="#contact"
-              className="mt-2 inline-flex items-center gap-1 text-lg font-semibold hover:text-primary"
+              whileHover={{ scale: 1.06, x: 4 }}
+              transition={{ type: "spring", stiffness: 380, damping: 14 }}
+              className="mt-2 inline-flex origin-left items-center gap-1 text-lg font-semibold transition-all duration-300 ease-out hover:text-primary"
             >
               Discovery call <ArrowUpRight className="h-4 w-4" />
-            </a>
-          </div>
-          <div>
+            </motion.a>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <p className="text-sm text-muted-foreground">Elsewhere</p>
             <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
               {socials.map((s) => (
-                <a key={s} href="#top" className="text-lg font-semibold hover:text-primary">
+                <motion.a
+                  key={s}
+                  href="#top"
+                  whileHover={{ scale: 1.15, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 420, damping: 12 }}
+                  className="text-lg font-semibold transition-all duration-300 ease-out hover:text-primary"
+                >
                   {s}
-                </a>
+                </motion.a>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </RevealGroup>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-border py-6 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} Ruchit Designs. All rights reserved.</p>
-          <a href="#top" className="hover:text-foreground">
+          <motion.a
+            href="#top"
+            whileHover={{ y: -3 }}
+            className="transition-all duration-300 ease-out hover:text-foreground"
+          >
             Back to top
-          </a>
+          </motion.a>
         </div>
 
-        <p
+        <motion.p
           aria-hidden
-          className="pointer-events-none select-none whitespace-nowrap text-center font-display text-[22vw] font-extrabold uppercase leading-[0.75] text-foreground/[0.04]"
+          style={{ x, scale }}
+          className="pointer-events-none select-none whitespace-nowrap text-center font-display text-[22vw] font-extrabold uppercase leading-[0.75] text-foreground/[0.05]"
         >
-          Ruchit
-        </p>
+          Mr. Ruchit
+        </motion.p>
       </div>
     </footer>
   );
