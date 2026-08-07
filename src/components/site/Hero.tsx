@@ -70,15 +70,15 @@ export function Hero() {
           <motion.img
             src={avatar}
             alt="Portrait illustration of Semir Muzeyin, brand and product designer"
-            width={681}
-            height={1093}
+            width={753}
+            height={1032}
             style={{
               rotateX: rotX,
               rotateY: rotY,
               transformPerspective: 800,
               backgroundColor: "transparent",
-              maskImage: "linear-gradient(to bottom, #000 62%, transparent 82%)",
-              WebkitMaskImage: "linear-gradient(to bottom, #000 62%, transparent 82%)",
+              maskImage: "linear-gradient(to bottom, #000 88%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to bottom, #000 88%, transparent 100%)",
             }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1, y: [0, -14, 0] }}
@@ -87,7 +87,7 @@ export function Hero() {
               scale: { type: "spring", stiffness: 140, damping: 12 },
               y: { duration: 5.5, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="pointer-events-none absolute left-1/2 top-[4%] w-[42%] max-w-[380px] -translate-x-1/2 object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.75)] sm:w-[34%]"
+            className="pointer-events-none absolute left-1/2 top-[6%] w-[40%] max-w-[360px] -translate-x-1/2 object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.75)] sm:w-[32%]"
           />
 
         </div>
