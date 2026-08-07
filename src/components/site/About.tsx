@@ -1,4 +1,5 @@
-import portrait from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/portrait-new.jpg.asset.json";
+const portrait = portraitAsset.url;
 
 const history = [
   { role: "Independent Brand Designer", company: "Semir Visual", period: "2022 — Present" },

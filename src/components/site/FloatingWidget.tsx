@@ -18,11 +18,11 @@ export function FloatingWidget() {
             className="w-64 origin-bottom-right rounded-3xl border border-border bg-surface/95 p-3 shadow-card backdrop-blur-xl"
           >
             <a
-              href="mailto:hello@ruchitdesigns.com"
+              href="mailto:semir.semir6@icloud.com"
               className="flex items-center gap-3 rounded-2xl px-3 py-3 transition-all duration-300 ease-out hover:bg-surface-2"
             >
               <Mail className="h-4 w-4 text-primary" />
-              <span className="text-sm">hello@ruchitdesigns.com</span>
+              <span className="text-sm">semir.semir6@icloud.com</span>
             </a>
             <a
               href="#contact"
