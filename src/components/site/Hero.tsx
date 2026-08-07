@@ -72,7 +72,14 @@ export function Hero() {
             alt="Portrait illustration of Semir Muzeyin, brand and product designer"
             width={681}
             height={1093}
-            style={{ rotateX: rotX, rotateY: rotY, transformPerspective: 800, backgroundColor: "transparent" }}
+            style={{
+              rotateX: rotX,
+              rotateY: rotY,
+              transformPerspective: 800,
+              backgroundColor: "transparent",
+              maskImage: "linear-gradient(to bottom, #000 62%, transparent 82%)",
+              WebkitMaskImage: "linear-gradient(to bottom, #000 62%, transparent 82%)",
+            }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1, y: [0, -14, 0] }}
             transition={{
