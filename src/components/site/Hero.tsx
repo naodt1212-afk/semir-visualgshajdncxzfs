@@ -1,8 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Star } from "lucide-react";
 import { useEffect } from "react";
-import avatarAsset from "@/assets/avatar-head-new.png.asset.json";
-const avatar = avatarAsset.url;
+import avatar from "@/assets/avatar-head-cutout.png";
 
 const logos = ["Hoodverse", "Tea Sense", "Fruit Blends", "Northgate", "Ampersand"];
 
@@ -71,18 +70,26 @@ export function Hero() {
           <motion.img
             src={avatar}
             alt="Portrait illustration of Semir Muzeyin, brand and product designer"
-            width={1024}
-            height={1024}
-            style={{ rotateX: rotX, rotateY: rotY, transformPerspective: 800 }}
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1, y: [0, -18, 0] }}
+            width={681}
+            height={1093}
+            style={{
+              rotateX: rotX,
+              rotateY: rotY,
+              transformPerspective: 800,
+              backgroundColor: "transparent",
+              maskImage: "linear-gradient(to bottom, #000 62%, transparent 82%)",
+              WebkitMaskImage: "linear-gradient(to bottom, #000 62%, transparent 82%)",
+            }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1, y: [0, -14, 0] }}
             transition={{
               opacity: { duration: 0.7 },
-              scale: { type: "spring", stiffness: 120, damping: 14 },
-              y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+              scale: { type: "spring", stiffness: 140, damping: 12 },
+              y: { duration: 5.5, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="pointer-events-none absolute left-1/2 top-[6%] w-[46%] max-w-[420px] -translate-x-1/2 drop-shadow-[0_30px_60px_rgba(0,0,0,0.75)] sm:w-[38%]"
+            className="pointer-events-none absolute left-1/2 top-[4%] w-[42%] max-w-[380px] -translate-x-1/2 object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.75)] sm:w-[34%]"
           />
+
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:items-end">
