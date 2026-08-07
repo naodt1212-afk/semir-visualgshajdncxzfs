@@ -36,9 +36,9 @@ export function Header() {
             transition={{ type: "spring", stiffness: 320, damping: 12 }}
             className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-full bg-primary/15 ring-1 ring-primary/40"
           >
-            <img src={avatar} alt="Ruchit P." width={64} height={64} className="h-7 w-7 object-cover" />
+            <img src={avatar} alt="semir visual" width={64} height={64} className="h-7 w-7 object-cover" />
           </motion.span>
-          <span className="truncate text-sm font-semibold">Ruchit P.</span>
+          <span className="truncate text-sm font-semibold">semir visual</span>
         </a>
 
         <div className="ml-auto hidden items-center gap-1 sm:flex">
