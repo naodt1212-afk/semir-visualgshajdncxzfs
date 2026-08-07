@@ -1,8 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Star } from "lucide-react";
 import { useEffect } from "react";
-import avatarAsset from "@/assets/avatar-head-new.png.asset.json";
-const avatar = avatarAsset.url;
+import avatar from "@/assets/avatar-head-cutout.png";
 
 const logos = ["Hoodverse", "Tea Sense", "Fruit Blends", "Northgate", "Ampersand"];
 
