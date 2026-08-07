@@ -69,7 +69,7 @@ export function Footer() {
         </RevealGroup>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-border py-6 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Ruchit Designs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}&nbsp;Semir&nbsp;muzeyin . All rights reserved.</p>
           <motion.a
             href="#top"
             whileHover={{ y: -3 }}
