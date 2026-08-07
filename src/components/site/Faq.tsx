@@ -114,7 +114,7 @@ export function Faq() {
               </p>
               <div className="mt-8 flex flex-col gap-3">
                 <motion.a
-                  href="mailto:hello@ruchitdesigns.com"
+                  href="mailto:semir.semir6@icloud.com"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -123,7 +123,7 @@ export function Faq() {
                   <CalendarDays className="h-4 w-4" /> Schedule Now
                 </motion.a>
                 <motion.a
-                  href="mailto:hello@ruchitdesigns.com"
+                  href="mailto:semir.semir6@icloud.com"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}

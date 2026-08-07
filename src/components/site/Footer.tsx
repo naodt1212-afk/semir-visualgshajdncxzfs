@@ -3,7 +3,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealGroup, itemVariants } from "@/components/motion/Reveal";
 
-const socials = ["Instagram", "tiktok", "telegram", "LinkedIn"];
+const socials = [
+  { label: "Instagram @semirmuzeyin", href: "https://instagram.com/semirmuzeyin" },
+  { label: "TikTok @semir_visual", href: "https://tiktok.com/@semir_visual" },
+  { label: "Telegram @semir001", href: "https://t.me/semir001" },
+  { label: "Call 09301309333", href: "tel:09301309333" },
+];
 
 export function Footer() {
   const ref = useRef<HTMLElement | null>(null);
@@ -54,14 +59,16 @@ export function Footer() {
             <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
               {socials.map((s) => (
                 <motion.a
-                  key={s}
-                  href="#top"
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
                   whileHover={{ scale: 1.15, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 420, damping: 12 }}
                   className="text-lg font-semibold transition-all duration-300 ease-out hover:text-primary"
                 >
-                  {s}
+                  {s.label}
                 </motion.a>
               ))}
             </div>
