@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealGroup, itemVariants } from "@/components/motion/Reveal";
 
-const socials = ["Instagram", "Dribbble", "Behance", "LinkedIn"];
+const socials = ["Instagram", "tiktok", "telegram", "LinkedIn"];
 
 export function Footer() {
   const ref = useRef<HTMLElement | null>(null);
@@ -30,12 +30,12 @@ export function Footer() {
           <motion.div variants={itemVariants}>
             <p className="text-sm text-muted-foreground">Email me</p>
             <motion.a
-              href="mailto:hello@ruchitdesigns.com"
+              href="mailto:semir.semir6@icloud.com"
               whileHover={{ scale: 1.06, x: 4 }}
               transition={{ type: "spring", stiffness: 380, damping: 14 }}
               className="mt-2 inline-flex origin-left text-lg font-semibold transition-all duration-300 ease-out hover:text-primary"
             >
-              hello@ruchitdesigns.com
+              semir.semir6@icloud.com
             </motion.a>
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -69,7 +69,7 @@ export function Footer() {
         </RevealGroup>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-border py-6 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Ruchit Designs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()}&nbsp;Semir&nbsp;muzeyin . All rights reserved.</p>
           <motion.a
             href="#top"
             whileHover={{ y: -3 }}
@@ -84,7 +84,7 @@ export function Footer() {
           style={{ x, scale }}
           className="pointer-events-none select-none whitespace-nowrap text-center font-display text-[22vw] font-extrabold uppercase leading-[0.75] text-foreground/[0.05]"
         >
-          Mr. Ruchit
+          Semir Muzeyin
         </motion.p>
       </div>
     </footer>

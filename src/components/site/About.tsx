@@ -1,7 +1,7 @@
 import portrait from "@/assets/portrait.jpg";
 
 const history = [
-  { role: "Independent Brand Designer", company: "Ruchit Designs", period: "2022 — Present" },
+  { role: "Independent Brand Designer", company: "Semir Visual", period: "2022 — Present" },
   { role: "Senior Visual Designer", company: "Northgate Studio", period: "2020 — 2022" },
   { role: "Brand & Packaging Designer", company: "Ampersand Creative", period: "2018 — 2020" },
   { role: "Junior Designer", company: "Studio Kiln", period: "2016 — 2018" },
@@ -14,7 +14,7 @@ export function About() {
         <div className="card-surface overflow-hidden p-3">
           <img
             src={portrait}
-            alt="Portrait of Ruchit, brand and packaging designer"
+            alt="Portrait of Semir, brand and packaging designer"
             loading="lazy"
             width={900}
             height={1100}
@@ -28,7 +28,7 @@ export function About() {
               Designing experiences that <span className="text-primary">make sense</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
-              I’m Ruchit — a brand and packaging designer with eight years of turning fuzzy ideas into
+              I’m Semir&nbsp;muzeyin &nbsp;— a brand and packaging designer with eight years of turning fuzzy ideas into
               systems teams can actually use. I start with questions, not moodboards: who is this for,
               what should it feel like, and what has to be true for it to work.
             </p>
