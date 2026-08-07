@@ -3,7 +3,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealGroup, itemVariants } from "@/components/motion/Reveal";
 
-const socials = ["Instagram", "tiktok", "telegram", "LinkedIn"];
+const socials = [
+  { label: "Instagram @semirmuzeyin", href: "https://instagram.com/semirmuzeyin" },
+  { label: "TikTok @semir_visual", href: "https://tiktok.com/@semir_visual" },
+  { label: "Telegram @semir001", href: "https://t.me/semir001" },
+  { label: "Call 09301309333", href: "tel:09301309333" },
+];
 
 export function Footer() {
   const ref = useRef<HTMLElement | null>(null);
