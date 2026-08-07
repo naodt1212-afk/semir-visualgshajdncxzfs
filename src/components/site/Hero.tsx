@@ -70,8 +70,8 @@ export function Hero() {
           <motion.img
             src={avatar}
             alt="Portrait illustration of Semir Muzeyin, brand and product designer"
-            width={624}
-            height={855}
+            width={753}
+            height={1032}
             style={{
               rotateX: rotX,
               rotateY: rotY,
