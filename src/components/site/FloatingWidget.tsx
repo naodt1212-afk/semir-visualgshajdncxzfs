@@ -25,6 +25,22 @@ export function FloatingWidget() {
               <span className="text-sm">semir.semir6@icloud.com</span>
             </a>
             <a
+              href="tel:09301309333"
+              className="flex items-center gap-3 rounded-2xl px-3 py-3 transition-all duration-300 ease-out hover:bg-surface-2"
+            >
+              <Phone className="h-4 w-4 text-primary" />
+              <span className="text-sm">09301309333</span>
+            </a>
+            <a
+              href="https://t.me/semir001"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 rounded-2xl px-3 py-3 transition-all duration-300 ease-out hover:bg-surface-2"
+            >
+              <Send className="h-4 w-4 text-primary" />
+              <span className="text-sm">@semir001</span>
+            </a>
+            <a
               href="#contact"
               onClick={() => setOpen(false)}
               className="flex items-center gap-3 rounded-2xl px-3 py-3 transition-all duration-300 ease-out hover:bg-surface-2"
