@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CalendarDays, Mail, MessageCircle, X } from "lucide-react";
+import { CalendarDays, Mail, MessageCircle, Phone, Send, X } from "lucide-react";
 
 export function FloatingWidget() {
   const [open, setOpen] = useState(false);
