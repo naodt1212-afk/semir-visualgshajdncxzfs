@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import avatarAsset from "@/assets/avatar-head-new.png.asset.json";
-const avatar = avatarAsset.url;
+import logoAsset from "@/assets/semir-visual-logo.png.asset.json";
+const avatar = logoAsset.url;
 
 const links = [
   { label: "Work", href: "#work" },
