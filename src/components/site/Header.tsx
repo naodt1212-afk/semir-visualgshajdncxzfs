@@ -35,9 +35,9 @@ export function Header() {
           <motion.span
             whileHover={{ rotate: 12, scale: 1.1 }}
             transition={{ type: "spring", stiffness: 320, damping: 12 }}
-            className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-full bg-primary/15 ring-1 ring-primary/40"
+            className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-lg ring-1 ring-primary/30"
           >
-            <img src={avatar} alt="semir visual" width={64} height={64} className="h-7 w-7 object-cover" />
+            <img src={avatar} alt="Semir Visual logo" width={64} height={64} className="h-8 w-8 object-contain" />
           </motion.span>
           <span className="truncate text-sm font-semibold">semir visual</span>
         </a>
