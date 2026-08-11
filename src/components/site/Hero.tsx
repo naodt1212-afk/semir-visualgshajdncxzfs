@@ -1,7 +1,8 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Star } from "lucide-react";
 import { useEffect } from "react";
-import avatar from "@/assets/avatar-head-cutout.png";
+import heroHeadAsset from "@/assets/hero-head.png.asset.json";
+const avatar = heroHeadAsset.url;
 
 const logos = ["Hoodverse", "Tea Sense", "Fruit Blends", "Northgate", "Ampersand"];
 
@@ -70,8 +71,8 @@ export function Hero() {
           <motion.img
             src={avatar}
             alt="Portrait illustration of Semir Muzeyin, brand and product designer"
-            width={753}
-            height={1032}
+            width={408}
+            height={612}
             style={{
               rotateX: rotX,
               rotateY: rotY,
